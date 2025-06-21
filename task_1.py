@@ -16,9 +16,7 @@ model += (2 * y <= 40, "Fruit_puree_constraint")
 # Цільова функція
 model += x + y, "Total_drinks_produced"
 
-
 model.solve()
-
 
 print(f"Статус: {LpStatus[model.status]}")
 print(f"Виробити лимонаду: {x.value()} одиниць")
